@@ -1,6 +1,8 @@
 ---
 description: "Step-by-step (committable) plan to adopt root AGENTS.md as the primary repo entrypoint while preserving spec v1.2 behavior."
-status: open
+status: executed
+executed_at: 2026-02-15
+execution_ref: codex/adopt-agents-md-standard
 ---
 
 # Task: Adopt AGENTS.md standard (committable refactor)
