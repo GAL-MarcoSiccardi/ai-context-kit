@@ -1,5 +1,6 @@
 ---
 description: "Step-by-step (committable) plan to refactor AI Context Kit to use AGENTS.md as the primary standard entrypoint without losing any existing features (spec v1.2 instruction system stays)."
+status: open
 ---
 
 # Refactor Plan (Committable): Adopt `AGENTS.md` Standard (No Feature Loss)
@@ -61,7 +62,7 @@ Apply these rules to all new/updated files created by this plan (`AGENTS.md`, `t
   - `templates/*`
   - `prompts/*`
   - `projects/*`, `usercontexts/*`
-  - `.github/prompts/*` (planning prompts)
+  - `plans/*` (planning prompts)
 - Identify and write down (not committed) the current “sources of truth” and their precedence (spec vs templates vs prompts vs samples).
 - Confirm the `/ack.*` command surface + default session state currently used by this repo.
 - Confirm formatting rules (e.g., no decorative icons in headers) and canonical path stability expectations.
@@ -112,7 +113,7 @@ Apply these rules to all new/updated files created by this plan (`AGENTS.md`, `t
 The root `AGENTS.md` is done when it is **repo-only**, **scannable**, and contains (at minimum):
 - **Purpose + model**: what AI Context Kit is; the distinction between **instructions** vs **prompts/queries**.
 - **Truth sources + precedence**: what is authoritative (spec), canonical (templates), operational (prompts), and illustrative (samples).
-- **Repo map**: one-line purpose for `specs/`, `templates/`, `prompts/`, `projects/`, `usercontexts/`, `.github/prompts/`.
+- **Repo map**: one-line purpose for `specs/`, `templates/`, `prompts/`, `projects/`, `usercontexts/`, `plans/`.
 - **Scoping & precedence policy**: if nested `AGENTS.md` files exist later, define scope (directory subtree) and precedence (closest wins), and state how conflicts are handled.
 - **Session-state summary**: Role/Mode, Phase, Output Style, Tone, Interaction Mode; state persists; **no silent transitions**.
 - **Ambiguity rule**: when unclear, ask before changing project/role/phase/assumptions.
@@ -212,7 +213,7 @@ Document this policy in root `AGENTS.md` so it’s clear even if you don’t add
 **Changes:**
 - Declare `AGENTS.md` as primary agent entrypoint for this repo.
 - Explain relationship to the existing spec/templates/prompts (spec remains authoritative).
-- Mention `.github/prompts/` contains planning prompts, but they’re plain Markdown usable anywhere.
+- Mention `plans/` contains planning prompts, and they are plain Markdown usable anywhere.
 
 **Acceptance check:**
 - README remains correct and does not break existing onboarding.

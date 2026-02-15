@@ -23,7 +23,14 @@ Use this order when files differ:
 | `projects/` | Project-level instruction examples and validation reports |
 | `usercontexts/` | User-context instruction examples and validation reports |
 | `plans/` | Planning prompts used to execute repository refactors |
-| `.github/prompts/` | Legacy planning-prompt location used in some repos |
+
+## Plan Lifecycle Policy
+- Plans must live in `plans/` only.
+- Each `plans/*.prompt.md` file must declare frontmatter `status: open` or `status: executed`.
+- When a plan is executed, record:
+  - `executed_at` (`YYYY-MM-DD`)
+  - `execution_ref` (branch, commit, PR, or tag)
+- Use `./plans/plan-status.sh` to detect open vs executed plans.
 
 ## Scope And Precedence For AGENTS.md Files
 - An `AGENTS.md` file applies to the directory it is in and all subdirectories.
