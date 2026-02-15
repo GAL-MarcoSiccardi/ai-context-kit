@@ -31,7 +31,7 @@ This framework consists of:
 - **Session specification** – How AI assistants should maintain and adapt context during work sessions
 - **Templates** – For creating new instruction sets quickly and consistently
 
-All components work seamlessly across different LLM environments (Anthropic Claude, GitHub Copilot, Mistral, Gemini, LM Studio, Ollama, etc.), ensuring that every AI assistant understands your background, working style, and project context without repeated explanations. Please note that results my vary based on platform and you may need to adjust your instuctions accordingly.
+All components are designed to work across hosted and local LLM environments, ensuring that every AI assistant understands your background, working style, and project context without repeated explanations. Results may vary by platform, so you may need to adjust your instructions accordingly.
 
 ---
 
@@ -315,7 +315,7 @@ This repository includes a comprehensive **prompt system** for creating and vali
 
 ### How to Use Prompts
 
-1. **Copy the prompt content** into your preferred AI assistant (Claude, GPT, Gemini, Mistral, etc.)
+1. **Copy the prompt content** into your preferred AI assistant
 2. **Follow the guided workflow** - the AI will ask questions and gather information
 3. **Review the generated output** - creation prompts produce complete instruction files
 4. **Validate your work** - use validation prompts to check for completeness and compliance
@@ -490,7 +490,7 @@ This instruction-based system evolved from the challenge of maintaining consiste
 
 What makes this approach powerful is the shift from treating every AI interaction as isolated to creating **persistent, layered instruction sets** that transform how AI assistants understand and support your work.
 
-This represents lessons learned from extensive work with various LLM providers (Anthropic Claude, GitHub Copilot, OpenAI, Mistral, Gemini, and local models) and real-world development workflows across multiple projects and domains.
+This represents lessons learned from extensive work with hosted and local LLM providers and real-world development workflows across multiple projects and domains.
 
 ---
 
