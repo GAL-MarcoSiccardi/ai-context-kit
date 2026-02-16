@@ -56,16 +56,22 @@ ai-context-kit/
 │   ├── create-usercontext-instructions.prompt.md     # Generate user context instruction files
 │   ├── create-project-instructions.prompt.md         # Generate project instruction files
 │   ├── create-agents-md.prompt.md                    # Generate AGENTS.md files
+│   ├── create-skill.prompt.md                        # Generate skill files
 │   ├── validate-usercontext-instructions.prompt.md   # Validate user context files
 │   ├── validate-project-instructions.prompt.md       # Validate project files
-│   └── validate-agents-md.prompt.md                  # Validate AGENTS.md files
+│   ├── validate-agents-md.prompt.md                  # Validate AGENTS.md files
+│   └── validate-skill.prompt.md                      # Validate skill files
 │
 ├── specs/
 │   └── context_aware_ai_session_spec.md              # Specification for AI session management
 │
-└── templates/
-   ├── usercontext_template.instructions.md           # Canonical v1.2 user context template (authoritative)
-   └── project_template.instructions.md               # Canonical v1.2 project template (authoritative)
+├── templates/
+│  ├── usercontext_template.instructions.md           # Canonical v1.2 user context template (authoritative)
+│  ├── project_template.instructions.md               # Canonical v1.2 project template (authoritative)
+│  └── skill_template/SKILL.md                        # Canonical skill template
+│
+└── skills/
+   └── README.md                                      # Canonical location for skill instances
 ```
 
 ---
@@ -142,6 +148,29 @@ A structured approach to AI collaboration that manages context dynamically:
 
 ---
 
+## Agent Skills
+
+This repository includes a foundation for reusable **Agent Skills** authoring and validation.
+
+- Documentation reference: https://agentskills.io/home
+- Canonical paths:
+  - `templates/skill_template/SKILL.md`
+  - `prompts/create-skill.prompt.md`
+  - `prompts/validate-skill.prompt.md`
+  - `skills/`
+
+### Skill Workflow
+1. Create a skill using `prompts/create-skill.prompt.md` and the canonical template.
+2. Validate the skill using `prompts/validate-skill.prompt.md`.
+3. Keep skill instructions concise and move larger detail to skill-local references.
+
+### Neutrality And Safety
+- Skills must remain provider-neutral and runtime-portable.
+- Use relative paths for skill-local references.
+- Treat tool execution permissions as explicit policy decisions.
+
+---
+
 ## File Path Conventions
 
 This repository relies on **stable, predictable file paths** so that instructions, specifications, prompts, and validators can reference each other safely.
@@ -160,6 +189,8 @@ The following paths are considered **canonical**:
   - Authoritative specification (v1.2+)
 - `projects/`
   - Project-specific instruction files
+- `skills/`
+  - Skill instances (`SKILL.md`-based folders)
 - Root `README.md`
   - Human-facing entry point and workflow documentation
 
