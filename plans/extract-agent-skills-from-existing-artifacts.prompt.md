@@ -1,6 +1,8 @@
 ---
 description: "Step-by-step (committable) plan to extract reusable skills from existing prompts and instruction artifacts after foundation adoption."
-status: open
+status: executed
+executed_at: 2026-02-16
+execution_ref: codex/extract-agent-skills-from-existing-artifacts
 ---
 
 # Task: Extract agent skills from existing artifacts
