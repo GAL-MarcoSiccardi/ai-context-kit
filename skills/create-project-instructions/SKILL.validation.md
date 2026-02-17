@@ -2,13 +2,13 @@
 
 **File:** skills/create-project-instructions/SKILL.md
 **Skill:** create-project-instructions
-**Validated:** 2026-02-16
+**Validated:** 2026-02-17
 
 ---
 
 ## Overall Status: ✅ PASS
 
-**Compliance Score:** 95/100
+**Compliance Score:** 98/100
 
 ---
 
@@ -16,8 +16,8 @@
 **Status:** ✅ PASS
 
 ### Findings:
-- SKILL.md exists in expected directory.
-- Frontmatter contains required fields and valid syntax.
+- SKILL.md exists with valid frontmatter.
+- Required fields are present and syntactically valid.
 
 ### Recommendations:
 - None.
@@ -28,9 +28,8 @@
 **Status:** ✅ PASS
 
 ### Findings:
-- name matches folder and satisfies slug constraints.
-- description clearly states capability and use criteria.
-- Optional metadata fields are valid.
+- `name` matches folder and naming constraints.
+- Description is clear and trigger-appropriate.
 
 ---
 
@@ -38,8 +37,8 @@
 **Status:** ✅ PASS
 
 ### Findings:
-- Skill includes operational sections (purpose, usage, inputs, workflow, output, resources, safety).
-- Instructions are actionable and scoped.
+- Discovery/schema/command/role/output/checklist references are integrated.
+- Workflow is deterministic and actionable.
 
 ---
 
@@ -47,8 +46,8 @@
 **Status:** ✅ PASS
 
 ### Findings:
-- Skill-local references use relative paths.
-- Safety expectations and boundaries are explicit.
+- Relative references resolve.
+- Output quality gates include section/session/command completeness.
 
 ---
 
@@ -56,17 +55,16 @@
 **Status:** ✅ PASS
 
 ### Findings:
-- Language is provider-neutral and runtime-portable.
-- No provider-specific lock-in wording detected.
+- Provider-neutral wording preserved.
+- Runtime portability remains intact.
 
 ---
 
 ## Summary
 
 ### Strengths:
-- Deterministic workflow guidance.
-- Clean mapping to source artifacts.
-- Good alignment with repository skill template.
+- Skill now owns canonical generation logic with explicit templates/checklists.
+- Prompt dependency reduced to traceability only.
 
 ### Critical Issues (Must Fix):
 - None.
@@ -75,7 +73,7 @@
 - None.
 
 ### Enhancements (Optional):
-- Consider adding a compact checklist for role-table quality.
+- Add additional domain-specific role examples.
 
 ---
 
@@ -85,7 +83,7 @@
 1. None.
 
 ### Suggested Improvements:
-1. Periodically re-validate after source prompt updates.
+1. Revalidate when section schema changes.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: <project-name-slug>
-description: Project-specific instructions for <Project Name> (v1.2, spec v1.2, updated YYYY-MM-DD)
+description: Project-specific instructions for <Project Name> (v1.3, spec v1.3, updated YYYY-MM-DD)
 applyTo: "**/*"
 ---
 
@@ -16,7 +16,7 @@ applyTo: "**/*"
 
 ## Session Prerequisites
 
-- This project instruction file follows the **Context-Aware AI Session Flow Specification v1.2**
+- This project instruction file follows the **Context-Aware AI Session Flow Specification v1.3**
 - It must be used together with a compatible **User Context** instruction file
 - User Context provides global preferences; this file provides project-specific rules
 
@@ -214,4 +214,4 @@ Describe the main modules or subsystems of the project.
 
 ---
 
-© 2025 – <Project Name> – Project Instructions (Spec v1.2)
+© 2025 – <Project Name> – Project Instructions (Spec v1.3)

@@ -9,20 +9,21 @@ This repository distinguishes:
 
 ## Source Of Truth And Precedence
 Use this order when files differ:
-1. **Specification (authoritative):** `specs/context_aware_ai_session_spec.md`
+1. **Specification (authoritative, v1.3.0):** `specs/context_aware_ai_session_spec.md`
 2. **Templates (canonical structures):** `templates/*.instructions.md` and `templates/skill_template/SKILL.md`
-3. **Prompts (operational workflows):** `prompts/*.prompt.md`
-4. **Samples and skills (illustrative/operational artifacts):** `projects/*.instructions.md`, `usercontexts/*.instructions.md`, related `*.validation.md`, and `skills/`
+3. **Skills (canonical operational workflows):** `skills/*/SKILL.md` and skill-local references
+4. **Prompts (compatibility wrappers):** `prompts/*.prompt.md` (must defer detailed logic to skills)
+5. **Samples and validation artifacts (illustrative records):** `projects/*.instructions.md`, `usercontexts/*.instructions.md`, related `*.validation.md`
 
 ## Repository Map
 | Path | Purpose |
 | --- | --- |
 | `specs/` | Normative session-model specification and terminology |
 | `templates/` | Canonical instruction templates aligned to the spec |
-| `prompts/` | Create/validate prompt workflows for instruction files |
+| `skills/` | Canonical workflow skills (`SKILL.md` folders) and skill-local resources |
+| `prompts/` | Compatibility wrappers that route workflows to canonical skills |
 | `projects/` | Project-level instruction examples and validation reports |
 | `usercontexts/` | User-context instruction examples and validation reports |
-| `skills/` | Skill instances (`SKILL.md` folders) and skill-local resources |
 | `plans/` | Planning prompts used to execute repository refactors |
 
 ## Plan Lifecycle Policy
@@ -95,14 +96,14 @@ Alias policy:
 ## Update And Drift-Control Rule
 When `specs/context_aware_ai_session_spec.md` changes, audit and update all impacted artifacts:
 - `templates/`
-- `prompts/`
 - `skills/`
+- `prompts/` wrappers (keep thin; do not duplicate full workflow logic)
 - sample files in `projects/` and `usercontexts/`
 - `README.md`
 - `AGENTS.md`
 
 ## Key References
-- Specification: [`specs/context_aware_ai_session_spec.md`](specs/context_aware_ai_session_spec.md)
+- Specification (v1.3.0): [`specs/context_aware_ai_session_spec.md`](specs/context_aware_ai_session_spec.md)
 - Project operational defaults: [`projects/ai_context_kit_project.instructions.md`](projects/ai_context_kit_project.instructions.md)
 - User context template: [`templates/usercontext_template.instructions.md`](templates/usercontext_template.instructions.md)
 - Project template: [`templates/project_template.instructions.md`](templates/project_template.instructions.md)
