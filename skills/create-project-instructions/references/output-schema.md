@@ -4,7 +4,7 @@
 ```yaml
 ---
 name: {project-name-slug}
-description: Project-specific instructions for {Project Name} (v{version}, spec v1.2, updated {date})
+description: Project-specific instructions for {Project Name} (v{version}, spec v1.3, updated {date})
 applyTo: "**/*"
 ---
 ```
