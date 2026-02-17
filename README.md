@@ -155,14 +155,19 @@ This repository includes a foundation for reusable **Agent Skills** authoring an
 - Documentation reference: https://agentskills.io/home
 - Canonical paths:
   - `templates/skill_template/SKILL.md`
-  - `prompts/create-skill.prompt.md`
-  - `prompts/validate-skill.prompt.md`
   - `skills/`
+  - `prompts/` (compatibility wrappers)
+
+### Skill-First Authority Model
+Operational workflow authority is skill-first:
+1. `skills/` is the canonical source for create/validate/governance workflow logic.
+2. `prompts/` remains available as compatibility wrappers that route to canonical skills.
+3. Prompt wrappers should stay concise and must not reintroduce full checklists/rubrics already defined in skills.
 
 ### Skill Workflow
-1. Create a skill using `prompts/create-skill.prompt.md` and the canonical template.
-2. Validate the skill using `prompts/validate-skill.prompt.md`.
-3. Keep skill instructions concise and move larger detail to skill-local references.
+1. Author or update workflow behavior in `skills/*/SKILL.md` plus skill-local `references/`.
+2. Keep detailed operational logic in skills; use prompts as thin wrappers only.
+3. Validate skills and keep `SKILL.validation.md` current.
 
 ### Extracted Skills
 - `skills/create-usercontext-instructions/`
@@ -178,6 +183,7 @@ This repository includes a foundation for reusable **Agent Skills** authoring an
 - Skills must remain provider-neutral and runtime-portable.
 - Use relative paths for skill-local references.
 - Treat tool execution permissions as explicit policy decisions.
+- Keep prompt wrappers thin and non-authoritative to avoid logic drift.
 
 ---
 
@@ -191,16 +197,16 @@ The following paths are considered **canonical**:
   - Primary agent entrypoint (repo-specific operational contract)
 - `templates/`
   - Canonical instruction templates (spec v1.2)
+- `skills/`
+  - Canonical workflow skills (`SKILL.md`-based folders)
 - `prompts/`
-  - Instruction creation and validation prompts
+  - Compatibility wrappers for instruction/skill workflows
 - `plans/`
   - Planning prompts and plan lifecycle/status utilities
 - `specs/context_aware_ai_session_spec.md`
   - Authoritative specification (v1.2+)
 - `projects/`
   - Project-specific instruction files
-- `skills/`
-  - Skill instances (`SKILL.md`-based folders)
 - Root `README.md`
   - Human-facing entry point and workflow documentation
 
