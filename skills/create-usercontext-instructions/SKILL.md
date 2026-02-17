@@ -23,22 +23,28 @@ Generate a complete user-context instruction file with required sections, privac
 - Desired output filename/path.
 
 ## Workflow
-1. Run phased discovery for identity, expertise, projects, style, communication, and constraints.
-2. Capture only actionable context and normalize to the required section order.
-3. Apply frontmatter rules and formatting conventions.
-4. Produce a complete markdown artifact and concise summary of assumptions.
-5. Flag missing high-impact inputs explicitly.
+1. Run phased discovery using `references/discovery-phases.md`.
+2. Normalize findings into required schema using `references/output-schema.md`.
+3. Apply format contract from `references/output-format.md`.
+4. Validate against `references/quality-checklist.md` before final output.
+5. If structured metadata is requested, apply `references/json-metadata-schema.md`.
 
 ## Output Expectations
 - One complete `*.instructions.md` file for user context.
 - Required section coverage and logical ordering are preserved.
 - Privacy handling is explicit and consistent.
 - Output is provider-neutral.
+- Output contract and summary format follow `references/output-format.md`.
 
 ## Resources
-- Primary source: `../../prompts/create-usercontext-instructions.prompt.md`
+- Discovery workflow: `references/discovery-phases.md`
+- Output schema: `references/output-schema.md`
+- Optional metadata schema: `references/json-metadata-schema.md`
+- Output contract: `references/output-format.md`
+- Quality checklist: `references/quality-checklist.md`
 - Structure baseline: `../../templates/usercontext_template.instructions.md`
 - Example reference: `../../usercontexts/sample_usercontext.instructions.md`
+- Source traceability: `references/source-mapping.md`
 
 ## Constraints And Safety
 - Keep provider-neutral wording.
