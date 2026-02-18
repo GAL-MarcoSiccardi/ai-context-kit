@@ -1,6 +1,8 @@
 ---
 description: "Step-by-step (committable) plan to clean temporary migration artifacts and reduce post-migration duplication."
-status: open
+status: executed
+executed_at: 2026-02-18
+execution_ref: codex/repo-cleanup-post-skill-migration
 ---
 
 # Task: Repository Cleanup After Skill-First Migration
