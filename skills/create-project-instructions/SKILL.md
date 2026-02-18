@@ -47,7 +47,6 @@ Generate complete project instruction files with required sections, role definit
 - Quality checklist: `references/quality-checklist.md`
 - Structure baseline: `../../templates/project_template.instructions.md`
 - Example reference: `../../projects/ai_context_kit_project.instructions.md`
-- Source traceability: `references/source-mapping.md`
 
 ## Constraints And Safety
 - Keep recommendations tied to project scope.

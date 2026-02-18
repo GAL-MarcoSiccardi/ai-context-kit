@@ -42,7 +42,6 @@ Validate project instruction files with deterministic checks for frontmatter, re
 - Scoring model: `references/scoring.md`
 - Example target: `../../projects/ai_context_kit_project.instructions.md`
 - Example report: `../../projects/ai_context_kit_project.validation.md`
-- Source traceability: `references/source-mapping.md`
 
 ## Constraints And Safety
 - Keep findings specific and actionable.
