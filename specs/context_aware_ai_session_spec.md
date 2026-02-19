@@ -152,7 +152,7 @@ A session consists of structured context elements that determine how the assista
 | **Output Style** | Defines verbosity and formatting style of responses. | Yes | Yes | "Step-by-step reasoning", "Minimal code only", "Annotated solution" |
 | **Tone** | The communication voice or attitude used by the assistant. Can depend on Role & Phase or be manually overridden. | Yes | Yes | "Analytical", "Direct", "Encouraging", "Neutral" |
 | **Interaction Mode** | Defines how proactive or directive the assistant should be. | Optional* | Yes | "Advisory Mode", "Pair-programming Mode", "Driver Mode" |
-* **Note:** Interaction Mode is optional in the abstract session model, but **project-context AGENTS files should define a default Interaction Mode** to keep collaboration deterministic and to avoid ambiguity about how proactive the assistant should be at the start of a project session.
+* **Note:** Interaction Mode is optional in the abstract session model, but **project `AGENTS.md` files (project context) should define a default Interaction Mode** to keep collaboration deterministic and to avoid ambiguity about how proactive the assistant should be at the start of a project session.
 
 ---
 
