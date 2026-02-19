@@ -1,6 +1,6 @@
 # Command Reference Template
 
-Use this table shape inside the generated project instructions.
+Use this table shape inside the generated project AGENTS context.
 
 | Command | Parameters | Description | Example |
 | --- | --- | --- | --- |
