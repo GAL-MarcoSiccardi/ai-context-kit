@@ -86,6 +86,99 @@ Alias policy:
 - Namespaced `/ack.*` commands are the default.
 - Unprefixed aliases are allowed only when no command conflict exists.
 
+## Repository Project Context
+### Overview
+**AI Context Kit** is a template repository for building instruction-based AI collaboration across providers.
+
+- Current status / phase: **Active Development**
+- Primary objectives:
+  - Maintain spec-aligned templates and skills
+  - Provide clear, portable AGENTS-first guidance
+  - Keep repository structure stable for tooling
+
+### Role Definitions
+| Role | When To Use | Assistant Behavior | Typical Outputs |
+| --- | --- | --- | --- |
+| `Architect` | Defining structure, spec alignment, repository direction | Emphasize clarity, constraints, and tradeoffs | Plans, governance changes, architecture decisions |
+| `Prompt Engineer` | Refining create/validate wrappers and instruction workflows | Optimize flow, quality gates, and determinism | Prompt wrappers, workflow rules, validation criteria |
+| `Technical Writer` | Improving docs, onboarding, and migration clarity | Prioritize readability, consistency, and usability | README/AGENTS/template updates |
+| `Reviewer` | Verifying quality, regressions, and policy compliance | Surface gaps and actionable remediations | Findings, fixes, acceptance notes |
+
+### Tech Stack
+- Languages: Markdown, shell scripts
+- Runtime/tooling: provider-agnostic instruction workflows
+- Architecture: specification + templates + skills + wrappers
+- Validation: skill-based validation workflows and reports
+
+### Current Objectives
+- Keep templates and skills aligned with spec `v1.3.0`.
+- Complete AGENTS-first project-context transition.
+- Preserve deterministic behavior and path stability.
+- Reduce duplication and migration noise.
+
+### Development Principles
+- Prefer explicit, auditable rules over implicit behavior.
+- Keep changes incremental and reviewable.
+- Preserve provider neutrality and runtime portability.
+- Avoid silent context shifts and undocumented conventions.
+
+### Repository Context
+- Default branch: `main`
+- Key paths:
+  - `specs/`
+  - `templates/`
+  - `skills/`
+  - `prompts/`
+  - `usercontexts/`
+  - `plans/`
+
+### Working Together
+**Architect**
+- "Align this change with spec and AGENTS precedence."
+- "Propose a migration path with clear review gates."
+
+**Prompt Engineer**
+- "Keep wrappers thin and move logic into skills."
+- "Preserve quality gates while reducing duplication."
+
+**Technical Writer**
+- "Rewrite this section for AGENTS-first onboarding."
+- "Make platform-agnostic guidance clearer."
+
+**Reviewer**
+- "Check for regressions and stale references."
+- "List blocking findings before merge."
+
+### Key Components
+- Specification: `specs/context_aware_ai_session_spec.md`
+- Templates: `templates/`
+- Skills: `skills/`
+- Prompt wrappers: `prompts/`
+- User context samples: `usercontexts/`
+- Planning lifecycle: `plans/`
+
+### Testing Strategy
+- Validate structural/quality changes using canonical validation skills.
+- Re-run affected validation reports after workflow/guidance changes.
+- Verify references with repository-wide path scans.
+
+### Documentation Standards
+- Markdown-first documentation.
+- Relative repository paths for cross-references.
+- No decorative emojis/icons in headings.
+- Keep AGENTS concise; link out rather than duplicating large normative text.
+
+### Testing Commands
+```bash
+./plans/plan-status.sh
+rg -n "<pattern>" AGENTS.md README.md skills prompts templates specs usercontexts plans
+```
+
+### Future Roadmap
+- Complete AGENTS-only project-context transition.
+- Continue reducing legacy prompt-era artifacts.
+- Strengthen skill validation and drift-control automation.
+
 ## Formatting And Path Stability Rules
 - Do not use decorative icons or emojis in headings.
 - Keep canonical paths stable: `specs/`, `templates/`, `prompts/`, `usercontexts/`, `skills/`.
