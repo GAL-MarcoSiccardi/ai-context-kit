@@ -13,7 +13,7 @@ Use this order when files differ:
 2. **Templates (canonical structures):** `templates/*.instructions.md` and `templates/skill_template/SKILL.md`
 3. **Skills (canonical operational workflows):** `skills/*/SKILL.md` and skill-local references
 4. **Prompts (compatibility wrappers):** `prompts/*.prompt.md` (must defer detailed logic to skills)
-5. **Samples and validation artifacts (illustrative records):** `projects/*.instructions.md`, `usercontexts/*.instructions.md`, related `*.validation.md`
+5. **Samples and validation artifacts (illustrative records):** `usercontexts/*.instructions.md`, related `*.validation.md`
 
 ## Repository Map
 | Path | Purpose |
@@ -22,7 +22,6 @@ Use this order when files differ:
 | `templates/` | Canonical instruction templates aligned to the spec |
 | `skills/` | Canonical workflow skills (`SKILL.md` folders) and skill-local resources |
 | `prompts/` | Compatibility wrappers that route workflows to canonical skills |
-| `projects/` | Project-level instruction examples and validation reports |
 | `usercontexts/` | User-context instruction examples and validation reports |
 | `plans/` | Planning prompts used to execute repository refactors |
 
@@ -59,7 +58,7 @@ Active session state includes:
 - If assumptions, state, or intent are ambiguous, ask clarifying questions before acting.
 
 ### Default State For This Repo
-Defaults align with `projects/ai_context_kit_project.instructions.md`.
+Defaults are defined directly in this `AGENTS.md` to keep project context self-contained and AGENTS-first.
 
 | Element | Default Value |
 | --- | --- |
@@ -89,7 +88,7 @@ Alias policy:
 
 ## Formatting And Path Stability Rules
 - Do not use decorative icons or emojis in headings.
-- Keep canonical paths stable: `specs/`, `templates/`, `prompts/`, `projects/`, `usercontexts/`, `skills/`.
+- Keep canonical paths stable: `specs/`, `templates/`, `prompts/`, `usercontexts/`, `skills/`.
 - Use relative repository paths for cross-references.
 - Keep language provider-agnostic.
 
@@ -98,13 +97,13 @@ When `specs/context_aware_ai_session_spec.md` changes, audit and update all impa
 - `templates/`
 - `skills/`
 - `prompts/` wrappers (keep thin; do not duplicate full workflow logic)
-- sample files in `projects/` and `usercontexts/`
+- sample files in `usercontexts/`
 - `README.md`
 - `AGENTS.md`
 
 ## Key References
 - Specification (v1.3.0): [`specs/context_aware_ai_session_spec.md`](specs/context_aware_ai_session_spec.md)
-- Project operational defaults: [`projects/ai_context_kit_project.instructions.md`](projects/ai_context_kit_project.instructions.md)
+- Project operational defaults: this root `AGENTS.md` (Default State For This Repo)
 - User context template: [`templates/usercontext_template.instructions.md`](templates/usercontext_template.instructions.md)
 - Project template: [`templates/project_template.instructions.md`](templates/project_template.instructions.md)
 - Skill template: [`templates/skill_template/SKILL.md`](templates/skill_template/SKILL.md)
@@ -117,5 +116,4 @@ When `specs/context_aware_ai_session_spec.md` changes, audit and update all impa
   - [`prompts/validate-project-instructions.prompt.md`](prompts/validate-project-instructions.prompt.md)
   - [`prompts/validate-skill.prompt.md`](prompts/validate-skill.prompt.md)
 - Extracted skills index: [`skills/README.md`](skills/README.md)
-- Sample project instructions: [`projects/ai_context_kit_project.instructions.md`](projects/ai_context_kit_project.instructions.md)
 - Sample user context instructions: [`usercontexts/sample_usercontext.instructions.md`](usercontexts/sample_usercontext.instructions.md)
