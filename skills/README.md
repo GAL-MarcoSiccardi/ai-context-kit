@@ -9,24 +9,30 @@ This directory is the canonical location for repository skill instances.
 
 ## Scope
 - Store concrete skill folders here, each containing a `SKILL.md` file.
+- Each skill folder should also include `SKILL.validation.md`.
 - Keep references local to each skill using relative paths.
+- Use an optional `references/` folder only when a workflow needs local source material.
 
-## Extracted Skills
-- `create-usercontext-instructions`
-- `create-project-instructions`
-- `create-agents-md`
-- `create-skill`
-- `validate-usercontext-instructions`
-- `validate-project-instructions`
-- `validate-agents-md`
-- `validate-skill`
-- `plan-lifecycle-management`
-- `repository-drift-control`
+## Current Skill Inventory
+### Create Workflows
+- `create-usercontext-instructions` (`references/`)
+- `create-project-instructions` (`references/`)
+- `create-agents-md` (`references/`)
+- `create-skill` (`references/`)
 
-Each extracted skill includes:
+### Validate Workflows
+- `validate-usercontext-instructions` (`references/`)
+- `validate-project-instructions` (`references/`)
+- `validate-agents-md` (`references/`)
+- `validate-skill` (`references/`)
+
+### Governance Workflows
+- `plan-lifecycle-management` (no `references/` directory)
+- `repository-drift-control` (no `references/` directory)
+
+All current skills include:
 - `SKILL.md`
 - `SKILL.validation.md`
-- `references/` resources as needed by the workflow
 
 ## Naming Rules
 - Skill directory names must match the `name` field in each `SKILL.md`.
