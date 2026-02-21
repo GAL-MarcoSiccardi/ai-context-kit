@@ -12,7 +12,7 @@ Collect:
 Collect:
 - canonical directories
 - normative vs sample paths
-- legacy/plans handling
+- legacy structure handling
 
 ## Phase 3: Source Hierarchy And References
 Collect:

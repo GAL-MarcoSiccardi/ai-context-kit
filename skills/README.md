@@ -27,7 +27,6 @@ This directory is the canonical location for repository skill instances.
 - `validate-skill` (`references/`)
 
 ### Governance Workflows
-- `plan-lifecycle-management` (no `references/` directory)
 - `repository-drift-control` (no `references/` directory)
 
 All current skills include:

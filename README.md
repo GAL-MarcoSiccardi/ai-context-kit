@@ -13,7 +13,6 @@ This repository provides a **comprehensive AGENTS-first context and workflow sys
 
 - Root `AGENTS.md` is the primary operational entrypoint for agents in this repository.
 - `specs/context_aware_ai_session_spec.md` is the normative source of truth for the full session model.
-- `plans/` contains planning prompts as plain Markdown files usable in any environment. Older plans are removed to keep the repository clean once they are executed or deprecated.
 
 ### The Evolution
 
@@ -44,11 +43,6 @@ ai-context-kit/
 ├── AGENTS.md                                        # Primary agent entrypoint for this repository
 ├── README.md                                         # This file
 ├── LICENSE                                           # MIT License file
-│
-├── plans/                                            # Planning prompts (plain Markdown)
-│   ├── *.prompt.md                                   # Open/executed plan files (will be removed once executed or deprecated)
-│   ├── README.md                                     # Plan lifecycle policy
-│   └── plan-status.sh                                # Open/executed plan detector
 │
 ├── prompts/                                          # Composition prompt wrappers
 │   ├── create-usercontext-instructions.prompt.md     # Generate user context instruction files
@@ -187,7 +181,6 @@ Operational workflow authority is skill-first:
 - `skills/validate-usercontext-instructions/`
 - `skills/validate-project-instructions/`
 - `skills/validate-agents-md/`
-- `skills/plan-lifecycle-management/`
 - `skills/repository-drift-control/`
 - `skills/create-skill/`
 - `skills/validate-skill/`
@@ -214,8 +207,6 @@ The following paths are considered **canonical**:
   - Canonical workflow skills (`SKILL.md`-based folders)
 - `prompts/`
   - Composition wrappers for instruction/skill workflows
-- `plans/`
-  - Planning prompts and plan lifecycle/status utilities
 - `specs/context_aware_ai_session_spec.md`
   - Authoritative specification (v1.3.1+)
 - Root `README.md`

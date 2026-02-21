@@ -23,15 +23,6 @@ Use this order when files differ:
 | `skills/` | Canonical workflow skills (`SKILL.md` folders) and skill-local resources |
 | `prompts/` | Compatibility wrappers that route workflows to canonical skills |
 | `usercontexts/` | User-context instruction examples and validation reports |
-| `plans/` | Planning prompts used to execute repository refactors |
-
-## Plan Lifecycle Policy
-- Plans must live in `plans/` only.
-- Each `plans/*.prompt.md` file must declare frontmatter `status: open` or `status: executed`.
-- When a plan is executed, record:
-  - `executed_at` (`YYYY-MM-DD`)
-  - `execution_ref` (branch, commit, PR, or tag)
-- Use `./plans/plan-status.sh` to detect open vs executed plans.
 
 ## Scope And Precedence For AGENTS.md Files
 - An `AGENTS.md` file applies to the directory it is in and all subdirectories.
@@ -130,7 +121,6 @@ Alias policy:
   - `skills/`
   - `prompts/`
   - `usercontexts/`
-  - `plans/`
 
 ### Working Together
 **Architect**
@@ -155,7 +145,6 @@ Alias policy:
 - Skills: `skills/`
 - Prompt wrappers: `prompts/`
 - User context samples: `usercontexts/`
-- Planning lifecycle: `plans/`
 
 ### Testing Strategy
 - Validate structural/quality changes using canonical validation skills.
@@ -170,8 +159,7 @@ Alias policy:
 
 ### Testing Commands
 ```bash
-./plans/plan-status.sh
-rg -n "<pattern>" AGENTS.md README.md skills prompts templates specs usercontexts plans
+rg -n "<pattern>" AGENTS.md README.md skills prompts templates specs usercontexts
 ```
 
 ### Future Roadmap
