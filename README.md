@@ -146,8 +146,8 @@ Note: Interaction Mode is optional in the abstract session model, but project `A
 State behavior rules:
 - State persists across turns until explicitly changed or reset.
 - No silent transitions: project, role, phase, style, tone, and interaction mode must not change implicitly.
-- State can be changed with natural language or namespaced commands (for example `/tag.mode`, `/tag.phase`, `/tag.style`, `/tag.tone`, `/tag.interact`).
-- `/tag.context` shows current active state; `/tag.reset` resets session state.
+- State can be changed with natural language or namespaced commands (for example `/namespace.mode`, `/namespace.phase`, `/namespace.style`, `/namespace.tone`, `/namespace.interact`).
+- `/namespace.context` shows current active state; `/namespace.reset` resets session state.
 
 **Purpose:** Keeps behavior deterministic, transparent, and aligned as work moves between planning, implementation, debugging, and review.
 
