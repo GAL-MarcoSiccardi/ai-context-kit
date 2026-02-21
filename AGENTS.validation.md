@@ -1,7 +1,7 @@
 # AGENTS.md Validation Report
 
 **File:** `AGENTS.md`  
-**Validated:** 2026-02-19  
+**Validated:** 2026-02-21  
 **Validator:** `skills/validate-agents-md`
 
 ## Overall Status + Compliance Score

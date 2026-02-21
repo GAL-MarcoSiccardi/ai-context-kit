@@ -230,7 +230,7 @@ If paths must change, update the specification and README first, then adjust ski
 3. **Validate Artifacts**
    - Use `skills/validate-usercontext-instructions/SKILL.md` for user context files
    - Use `skills/validate-agents-md/SKILL.md` for `AGENTS.md`
-   - Use `skills/validate-project-instructions/SKILL.md` when validating project-instruction artifacts
+   - Use `skills/validate-project-instructions/SKILL.md` when validating project-context `AGENTS.md` artifacts
 
 4. **Load Context Into Your AI Environment**
    - See platform-specific instructions below
@@ -239,7 +239,7 @@ If paths must change, update the specification and README first, then adjust ski
 
 - Load your user context artifact as the base context
 - Add the relevant project `AGENTS.md` context on top
-- Use your project's namespaced commands (for example `/tag.context`) to inspect or adjust active session state
+- Use your project's namespaced commands (for example `/ack.context`) to inspect or adjust active session state
 
 ---
 
@@ -262,8 +262,8 @@ If paths must change, update the specification and README first, then adjust ski
 You can modify session state dynamically using:
 
 - **Natural language:** "Switch to Developer Mode" or "Move to Implementation Phase"
-- **Commands:** `/tag.context`, `/tag.mode`, `/tag.phase`, `/tag.style`, `/tag.tone`, `/tag.interact`, `/tag.reset`
-- **Command namespace:** Projects define a namespace prefix to avoid collisions (preferred pattern: `/tag.command`; AI Context Kit uses `/ack.*`)
+- **Commands:** `/namespace.context`, `/namespace.mode`, `/namespace.phase`, `/namespace.style`, `/namespace.tone`, `/namespace.interact`, `/namespace.reset`
+- **Command namespace:** Projects define a namespace prefix to avoid collisions (preferred pattern: `/namespace.command`; AI Context Kit uses `/ack.*`)
 - **Project defaults:** Each project can define typical starting configurations
 
 ### Design Principles

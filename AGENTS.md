@@ -4,7 +4,7 @@
 AI Context Kit is a cross-provider instruction-layer repository for context-aware AI collaboration.
 
 This repository distinguishes:
-- **Instructions**: persistent context files (`*.instructions.md`) that define who the user is, what the project is, and how collaboration should run.
+- **Instructions**: persistent context artifacts (`*.instructions.md` for user context and `AGENTS.md` for project context) that define who the user is, what the project is, and how collaboration should run.
 - **Prompts/queries**: day-to-day requests made inside that instructed environment.
 
 ## Source Of Truth And Precedence
@@ -103,7 +103,7 @@ Alias policy:
 
 ### Current Objectives
 - Keep templates and skills aligned with spec `v1.3.1`.
-- Complete AGENTS-first project-context transition.
+- Maintain the AGENTS-first project-context model.
 - Preserve deterministic behavior and path stability.
 - Reduce duplication and migration noise.
 
@@ -163,7 +163,7 @@ rg -n "<pattern>" AGENTS.md README.md skills prompts templates specs usercontext
 ```
 
 ### Future Roadmap
-- Complete AGENTS-only project-context transition.
+- Maintain AGENTS-only project-context governance.
 - Continue reducing legacy prompt-era artifacts.
 - Strengthen skill validation and drift-control automation.
 
@@ -188,10 +188,12 @@ When `specs/context_aware_ai_session_spec.md` changes, audit and update all impa
 - User context template: [`templates/usercontext_template.instructions.md`](templates/usercontext_template.instructions.md)
 - Skill template: [`templates/skill_template/SKILL.md`](templates/skill_template/SKILL.md)
 - Create prompts:
+  - [`prompts/create-agents-md.prompt.md`](prompts/create-agents-md.prompt.md)
   - [`prompts/create-usercontext-instructions.prompt.md`](prompts/create-usercontext-instructions.prompt.md)
   - [`prompts/create-project-instructions.prompt.md`](prompts/create-project-instructions.prompt.md)
   - [`prompts/create-skill.prompt.md`](prompts/create-skill.prompt.md)
 - Validate prompts:
+  - [`prompts/validate-agents-md.prompt.md`](prompts/validate-agents-md.prompt.md)
   - [`prompts/validate-usercontext-instructions.prompt.md`](prompts/validate-usercontext-instructions.prompt.md)
   - [`prompts/validate-project-instructions.prompt.md`](prompts/validate-project-instructions.prompt.md)
   - [`prompts/validate-skill.prompt.md`](prompts/validate-skill.prompt.md)
