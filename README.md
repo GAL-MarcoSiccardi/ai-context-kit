@@ -185,6 +185,21 @@ Operational workflow authority is skill-first:
 - `skills/create-skill/`
 - `skills/validate-skill/`
 
+### Invoking Skills
+
+Skills are invoked by loading the skill's `SKILL.md` content into your AI session. The method varies by platform:
+
+| Platform | How to invoke a skill |
+|----------|-----------------------|
+| **Claude Projects** | Add the `SKILL.md` file to project knowledge, or paste its content into the project instructions field |
+| **Claude (web)** | Paste the full `SKILL.md` content at the start of your conversation |
+| **VS Code Copilot Chat** | Type `#file:skills/<skill-name>/SKILL.md` in the chat input to reference the file inline |
+| **GitHub Copilot (coding agent)** | Reference or include the `SKILL.md` in your prompt file; the agent reads it as part of its context |
+| **ChatGPT** | Paste the content into the chat, or upload the `SKILL.md` as a file attachment |
+| **Local API** | Include the `SKILL.md` content in your system prompt when initializing a conversation |
+
+In repo-aware environments (VS Code Copilot Chat with `#file:` access, Claude Projects with full repository knowledge), skill reference files in `references/` subfolders are resolved automatically by the AI when following the workflow. In paste-based or upload-based environments (ChatGPT, local API), attach or include the relevant reference files alongside `SKILL.md` for full workflow coverage.
+
 ### Neutrality And Safety
 - Skills must remain provider-neutral and runtime-portable.
 - Use relative paths for skill-local references.
@@ -268,7 +283,7 @@ You can modify session state dynamically using:
 
 ### Design Principles
 
-- **Determinism:** Same context + same query = consistent responses 
+- **Reduced variance:** Same context + same query = more predictable responses that follow consistent conventions and reasoning patterns. LLMs are probabilistic by nature; this means reduced variance, not guaranteed identical outputs.
 - **Explicitness:** AI confirms context changes rather than assuming
 - **Continuity:** Session state persists across conversation turns
 - **Reversibility:** All context changes can be undone
