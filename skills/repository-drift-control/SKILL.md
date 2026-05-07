@@ -16,6 +16,10 @@ Prevent divergence between authoritative specification, operational prompts/temp
 - Use this skill during repo-wide refactors affecting canonical paths or precedence rules.
 - Do not use this skill for isolated content edits without cross-artifact impact.
 
+## How to Invoke
+
+Paste the full content of this file into your AI session to activate the workflow. In VS Code Copilot Chat, reference it with `#file:skills/repository-drift-control/SKILL.md`. In Claude Projects, add it to project knowledge. See [Invoking Skills](../../README.md#invoking-skills) in the README for full platform guidance.
+
 ## Required Inputs
 - Changed authoritative artifact(s), especially `specs/context_aware_ai_session_spec.md`.
 - Current canonical path map.

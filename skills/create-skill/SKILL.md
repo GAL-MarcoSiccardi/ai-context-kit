@@ -16,6 +16,10 @@ Generate complete `SKILL.md` artifacts for one skill folder, with explicit const
 - Use this skill when regenerating a `SKILL.md` file to align with repository skill standards.
 - Do not use this skill for validating an existing skill.
 
+## How to Invoke
+
+Paste the full content of this file into your AI session to activate the workflow. In VS Code Copilot Chat, reference it with `#file:skills/create-skill/SKILL.md`. In Claude Projects, add it to project knowledge. See [Invoking Skills](../../README.md#invoking-skills) in the README for full platform guidance.
+
 ## Required Inputs
 - Skill slug (`name`) and target folder path.
 - Capability summary and usage triggers.

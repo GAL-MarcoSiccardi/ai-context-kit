@@ -16,6 +16,10 @@ Generate a complete root `AGENTS.md` file that acts as an operational entrypoint
 - Use this skill when repository map, precedence, and session controls must be documented concisely.
 - Do not use this skill for project/user instruction file generation.
 
+## How to Invoke
+
+Paste the full content of this file into your AI session to activate the workflow. In VS Code Copilot Chat, reference it with `#file:skills/create-agents-md/SKILL.md`. In Claude Projects, add it to project knowledge. See [Invoking Skills](../../README.md#invoking-skills) in the README for full platform guidance.
+
 ## Required Inputs
 - Repository purpose and canonical paths.
 - Source precedence and key references.
