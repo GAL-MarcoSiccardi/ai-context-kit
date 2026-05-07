@@ -174,6 +174,8 @@ Operational workflow authority is skill-first:
 2. Keep detailed operational logic in skills; use prompts as composition wrappers only.
 3. Always validate skills and keep `SKILL.validation.md` current.
 
+> **Validation scope:** Validation scores reflect structural compliance with the spec format as assessed by an AI model against a deterministic rubric. They do not guarantee real-world session effectiveness or consistent LLM behavior across providers. Treat scores as a structural checklist result, not a quality certification.
+
 ### Available Skills
 - `skills/create-usercontext-instructions/`
 - `skills/create-project-instructions/`
@@ -263,7 +265,7 @@ If paths must change, update the specification and README first, then adjust ski
 | Platform | Method |
 |----------|---------|
 | **Anthropic Claude Projects** | Paste user context and project AGENTS context into **project-level context settings** and/or add to project knowledge |
-| **GitHub Copilot (VS Code/IDE)** | Just keep `AGENTS.md` in your project root (or the folder where you need it); Copilot reads it automatically |
+| **GitHub Copilot (VS Code/IDE, coding agent)** | Just keep `AGENTS.md` in your project root; Copilot reads it automatically. **Note:** Copilot Code Review does not yet support `AGENTS.md` — add a `.github/copilot-instructions.md` file as well if you need Code Review coverage |
 | **OpenAI ChatGPT** | Paste your user context into **Custom Instructions** and upload `AGENTS.md` as project context |
 | **OpenAI Codex** | Just keep `AGENTS.md` in your project root (or the folder where you need it); Codex reads it automatically |
 | **Local scripts / APIs** | Concatenate user context + `AGENTS.md` project context when initializing conversations |
