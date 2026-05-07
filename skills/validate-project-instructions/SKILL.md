@@ -9,7 +9,7 @@ metadata:
 # Validate Project Context AGENTS
 
 ## Purpose
-Validate project-context `AGENTS.md` files with deterministic checks for required sections, session-state controls, role definitions, and core required-section completeness.
+Validate project-context `AGENTS.md` files with structured checks for required sections, session-state controls, role definitions, and core required-section completeness based on a deterministic scoring rubric.
 
 ## When To Use
 - Use this skill to validate project-context `AGENTS.md` files.
@@ -18,7 +18,7 @@ Validate project-context `AGENTS.md` files with deterministic checks for require
 
 ## How to Invoke
 
-Paste the full content of this file into your AI session to activate the workflow. In VS Code Copilot Chat, reference it with `#file:skills/validate-project-instructions/SKILL.md`. In Claude Projects, add it to project knowledge. See [Invoking Skills](../../README.md#invoking-skills) in the README for full platform guidance.
+Load or attach this file's contents into your AI session to activate the workflow (paste, upload, or reference with `#file:skills/validate-project-instructions/SKILL.md` in VS Code Copilot Chat). In Claude Projects, add it to project knowledge. See [Invoking Skills](../../README.md#invoking-skills) in the README for full platform guidance.
 
 ## Required Inputs
 - Target project-context `AGENTS.md` path.

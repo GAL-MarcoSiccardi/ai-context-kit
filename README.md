@@ -198,7 +198,7 @@ Skills are invoked by loading the skill's `SKILL.md` content into your AI sessio
 | **ChatGPT** | Paste the content into the chat, or upload the `SKILL.md` as a file attachment |
 | **Local API** | Include the `SKILL.md` content in your system prompt when initializing a conversation |
 
-Skill reference files in `references/` subfolders are followed automatically by the AI when executing the workflow — you do not need to paste them separately.
+In repo-aware environments (VS Code Copilot Chat with `#file:` access, Claude Projects with full repository knowledge), skill reference files in `references/` subfolders are resolved automatically by the AI when following the workflow. In paste-based or upload-based environments (ChatGPT, local API), attach or include the relevant reference files alongside `SKILL.md` for full workflow coverage.
 
 ### Neutrality And Safety
 - Skills must remain provider-neutral and runtime-portable.
@@ -283,7 +283,7 @@ You can modify session state dynamically using:
 
 ### Design Principles
 
-- **Reduced variance:** Same context + same query = more predictable responses that follow consistent conventions and reasoning patterns
+- **Reduced variance:** Same context + same query = more predictable responses that follow consistent conventions and reasoning patterns. LLMs are probabilistic by nature; this means reduced variance, not guaranteed identical outputs.
 - **Explicitness:** AI confirms context changes rather than assuming
 - **Continuity:** Session state persists across conversation turns
 - **Reversibility:** All context changes can be undone

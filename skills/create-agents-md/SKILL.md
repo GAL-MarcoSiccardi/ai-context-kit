@@ -18,7 +18,7 @@ Generate a complete root `AGENTS.md` file that acts as an operational entrypoint
 
 ## How to Invoke
 
-Paste the full content of this file into your AI session to activate the workflow. In VS Code Copilot Chat, reference it with `#file:skills/create-agents-md/SKILL.md`. In Claude Projects, add it to project knowledge. See [Invoking Skills](../../README.md#invoking-skills) in the README for full platform guidance.
+Load or attach this file's contents into your AI session to activate the workflow (paste, upload, or reference with `#file:skills/create-agents-md/SKILL.md` in VS Code Copilot Chat). In Claude Projects, add it to project knowledge. See [Invoking Skills](../../README.md#invoking-skills) in the README for full platform guidance.
 
 ## Required Inputs
 - Repository purpose and canonical paths.

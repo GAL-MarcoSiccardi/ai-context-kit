@@ -18,7 +18,7 @@ Validate `AGENTS.md` files to ensure they are concise, operationally complete, a
 
 ## How to Invoke
 
-Paste the full content of this file into your AI session to activate the workflow. In VS Code Copilot Chat, reference it with `#file:skills/validate-agents-md/SKILL.md`. In Claude Projects, add it to project knowledge. See [Invoking Skills](../../README.md#invoking-skills) in the README for full platform guidance.
+Load or attach this file's contents into your AI session to activate the workflow (paste, upload, or reference with `#file:skills/validate-agents-md/SKILL.md` in VS Code Copilot Chat). In Claude Projects, add it to project knowledge. See [Invoking Skills](../../README.md#invoking-skills) in the README for full platform guidance.
 
 ## Required Inputs
 - Target `AGENTS.md` path.
@@ -47,7 +47,7 @@ Paste the full content of this file into your AI session to activate the workflo
 - Example target: `../../AGENTS.md`
 
 ## Constraints And Safety
-- Keep findings deterministic and repository-specific.
+- Keep the scoring rubric deterministic; findings should be repository-specific and actionable.
 - Avoid over-prescriptive style-only feedback.
 - Preserve provider-neutral language.
 - Do not duplicate full normative specs when suggesting fixes.
