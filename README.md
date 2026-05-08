@@ -50,7 +50,7 @@ The same question, with and without AI Context Kit loaded:
 **With AI Context Kit loaded:**
 > User: "Help me add authentication to the app."
 >
-> AI: "Given your .NET MAUI frontend and ASP.NET Core backend, and the OAuth2 pattern you've already established in Atlas Notes, I'd extend that same flow here. Want me to scaffold the token refresh handler first, or start with the MAUI secure storage integration?"
+> AI: "Given your SwiftUI codebase and the TCA architecture you're migrating to, I'd model this as a new `AuthenticationFeature` reducer rather than adding it to an existing one. Want me to scaffold the reducer and effect first, or start with the SwiftUI view bindings?"
 
 *The AI already knows your stack, your existing patterns, and your preferences.*
 
@@ -197,7 +197,7 @@ Operational workflow authority is skill-first:
 2. Keep detailed operational logic in skills; use prompts as composition wrappers only.
 3. Always validate skills and keep `SKILL.validation.md` current.
 
-> **Validation scope:** Validation scores reflect structural compliance with the spec format as assessed by an AI model against a deterministic rubric. They do not guarantee real-world session effectiveness or consistent LLM behavior across providers. Treat scores as a structural checklist result, not a quality certification.
+> **Validation scope:** Validation scores reflect structural compliance with the spec format as assessed by an AI model against a structured scoring rubric intended to be applied consistently. They do not guarantee real-world session effectiveness or consistent LLM behavior across providers. Treat scores as a structural checklist result, not a quality certification.
 
 ### Available Skills
 - `skills/create-usercontext-instructions/`
@@ -289,7 +289,7 @@ If paths must change, update the specification and README first, then adjust ski
 |----------|---------|---------------------|
 | **Anthropic Claude Projects** | Add user context and `AGENTS.md` to project knowledge or project instructions | Large files compete with conversation history for context window space; keep files concise |
 | **GitHub Copilot (VS Code/IDE, coding agent)** | Keep `AGENTS.md` in your project root; Copilot reads it automatically | Copilot Code Review does not yet support `AGENTS.md` — add `.github/copilot-instructions.md` if you need Code Review coverage |
-| **OpenAI ChatGPT** | Paste user context into **Custom Instructions**; upload `AGENTS.md` as a file attachment | Custom Instructions has a ~1500 character limit — long user context files will be silently truncated; maintain a condensed version |
+| **OpenAI ChatGPT** | Paste user context into **Custom Instructions**; upload `AGENTS.md` as a file attachment | Custom Instructions has a tight character limit — long user context files will be silently truncated; maintain a condensed version and consult current OpenAI documentation for the latest limit |
 | **OpenAI Codex** | Keep `AGENTS.md` in your project root; Codex reads it automatically | — |
 | **Local scripts / APIs** | Concatenate user context + `AGENTS.md` when initializing conversations | Context window management is your responsibility; monitor token usage for long sessions |
 | **Other platforms** | Use the platform's context management capabilities (project knowledge, system instructions, or initial prompt injection) | Method and limits vary; consult platform documentation |
@@ -437,7 +437,7 @@ This is a **GitHub template repository**. Here's how to use it:
 When the template repository gets improvements, check [CHANGELOG.md](CHANGELOG.md) to see what changed and which files are safe to update.
 
 **Recommended approach — copy files manually:**
-1. Open [CHANGELOG.md](https://github.com/MSiccDev/ai-context-kit/blob/main/CHANGELOG.md) in the template repository
+1. Open `CHANGELOG.md` in the template repository (browse the upstream source or your local copy if already synced)
 2. Read what changed in the new version
 3. Copy the updated files listed under **Safe to update** into your instance
 4. Commit the changes

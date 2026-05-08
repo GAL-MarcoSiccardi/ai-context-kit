@@ -346,9 +346,9 @@ See [`docs/spec-rationale.md`](../docs/spec-rationale.md) for example profiles a
 
 ### 10.1 Documentation Formatting
 
-- Context files must not include decorative icons or emojis in headers or body text.
+- Instruction artifacts (`AGENTS.md` and `*.instructions.md` files) must not include decorative icons or emojis in headers or body text.
 - Use standard Markdown headers (`##`, `###`) without symbolic prefixes.
-- Instruction files (`*.instructions.md`) should use minimal YAML frontmatter: `description` and `applyTo`.
+- Instruction files (`*.instructions.md`) should use minimal YAML frontmatter: `description`, `applyTo`, and optionally `spec_version` for version tracking.
 - Specification and reference documents may use extended metadata fields.
 
 ### 10.2 Canonical File Paths

@@ -1,4 +1,4 @@
-> **Scope note:** This score reflects structural compliance with the spec format as assessed by an AI model against a deterministic rubric. It does not guarantee real-world session effectiveness or consistent LLM behavior across providers. Treat it as a structural checklist result, not a quality certification.
+> **Scope note:** This score reflects structural compliance with the spec format as assessed by an AI model against a structured scoring rubric intended to be applied consistently. It does not guarantee real-world session effectiveness or consistent LLM behavior across providers. Treat it as a structural checklist result, not a quality certification.
 
 # User Context Instruction Validation Report
 
