@@ -2,7 +2,7 @@
 name: "create-agents-md"
 description: "Create concise, repository-specific AGENTS.md files with operational contract, precedence rules, and drift-control guidance."
 version: "1.0.0"
-allowed-tools: Read, Write, Edit
+allowed-tools: [Read, Write, Edit]
 metadata:
   source_prompt: "prompts/create-agents-md.prompt.md"
   workflow_type: "generation"

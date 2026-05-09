@@ -2,7 +2,7 @@
 name: "create-usercontext-instructions"
 description: "Create complete user-context instruction files using a structured discovery workflow and repository format rules."
 version: "1.0.0"
-allowed-tools: Read, Write, Edit
+allowed-tools: [Read, Write, Edit]
 metadata:
   source_prompt: "prompts/create-usercontext-instructions.prompt.md"
   workflow_type: "generation"
