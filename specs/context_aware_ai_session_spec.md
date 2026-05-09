@@ -126,7 +126,7 @@ A checkpoint artifact must include the following fields:
 | `phase` | Active phase at session end |
 | `output_style` | Active output style |
 | `tone` | Active tone |
-| `interaction_mode` | Active interaction mode |
+| `interaction_mode` | Active interaction mode (omit or set to `null` if not established) |
 | `open_tasks` | In-progress tasks or confirmed next steps |
 | `key_decisions` | Material decisions made during the session |
 | `active_files` | File paths actively referenced |
@@ -137,8 +137,9 @@ Additional fields are permitted. Sensitive data (credentials, private client con
 #### 4.4.3 Restore Rules
 
 - Checkpoint state is applied only when the artifact is explicitly provided at session start.
-- If checkpoint state conflicts with active instruction files, instruction files take precedence; the assistant must flag the conflict before proceeding.
-- The user must confirm the restored state before the assistant acts on it.
+- If checkpoint state conflicts with active instruction files, the assistant must surface each conflict explicitly and ask the user which source to apply.
+- Instruction files are the default if the user does not respond to a conflict prompt.
+- The user must confirm the full restored state before the assistant proceeds.
 
 ### 4.5 Context Compression
 

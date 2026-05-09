@@ -3,7 +3,7 @@ context_type: rationale
 document_type: companion_document
 spec_version: 1.4.0
 created: 2025-10-20
-last_updated: 2026-05-07
+last_updated: 2026-05-09
 status: active
 ---
 

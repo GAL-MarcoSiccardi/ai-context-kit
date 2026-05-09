@@ -81,7 +81,7 @@
 - Instruction-based architecture is explicit (WHO/WHAT/HOW) — assistant is told who Jordan Kim is, what the working constraints are, and how to behave in sessions.
 - Provider-neutral and portable wording is preserved throughout.
 - Content is complete for context-aware collaboration use across hosted, local, and API-based runtimes.
-- `spec_version: "1.4.0"` is present in YAML frontmatter, meeting the stamping requirement introduced in spec v1.4.0.
+- `spec_version: "1.4.0"` is present in YAML frontmatter, meeting the stamping requirement introduced in spec v1.3.1.
 - Session state defaults (role, phase, output style, tone, interaction mode) are explicitly defined.
 
 ### Recommendations

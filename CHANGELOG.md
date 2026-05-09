@@ -83,31 +83,6 @@ When a new version is released:
 
 ## [1.3.0] - 2025-12-23
 
-### Changed
-- Migrated project-context model fully to `AGENTS.md`; removed legacy project-context instruction files
-- Spec v1.3.1: added repository-level governance alignment for AGENTS precedence, command surface, and drift-control contracts
-- Command namespace pattern updated from `/tag.*` to `/namespace.*` for clarity
-- `AGENTS.md` is now the sole project-level operational entrypoint
-- All skills updated to reflect AGENTS-only authority model
-
-### Safe to update from template
-- `specs/context_aware_ai_session_spec.md`
-- `templates/usercontext_template.instructions.md`
-- `templates/AGENTS_template.md`
-- `templates/skill_template/SKILL.md`
-- `skills/` (all skill folders)
-- `prompts/` (all prompt files)
-- `README.md`
-
-### Protect (never overwrite)
-- Your personal `*_usercontext.instructions.md`
-- Your project `AGENTS.md`
-- Any custom skills you have created under `skills/`
-
----
-
-## [1.3.0] - 2025-12-23
-
 ### Added
 - Initial skill ecosystem: create and validate workflows for user context, project instructions, AGENTS.md, and skills
 - Repository drift-control skill
