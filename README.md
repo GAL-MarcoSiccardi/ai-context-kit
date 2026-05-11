@@ -387,7 +387,11 @@ $repository-drift-control
 
 To make these skills available when working in a different project, add the skill path to your Codex configuration, or copy/symlink the `.agents/skills/` directory into your project root.
 
-> **Note for Windows users:** Symlinks in git require `git config core.symlinks true`. If your environment does not support symlinks, copy the `skills/` subdirectories into `.agents/skills/` manually.
+> **Note for Windows users:** Git symlink support must be enabled **before** checkout — otherwise git materialises symlinks as plain text files. Enable it at clone time:
+> ```bash
+> git clone -c core.symlinks=true https://github.com/MSiccDev/ai-context-kit.git
+> ```
+> On Windows this also requires Developer Mode or elevated (Administrator) privileges. If you cannot enable symlinks, copy the `skills/` subdirectories into `.agents/skills/` manually as a fallback.
 
 ---
 
