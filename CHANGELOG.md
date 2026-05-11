@@ -13,7 +13,9 @@ When a new version is released:
 
 ## [Unreleased]
 
-### Added
+---
+
+## [1.4.1] - 2026-05-11
 - **Claude Code plugin** — `.claude-plugin/plugin.json` manifest makes the repo installable as a native Claude Code plugin; skills are auto-discovered from `skills/`
 - **GitHub Copilot CLI plugin** — `.claude-plugin/marketplace.json` turns the repo into a self-hosted marketplace, enabling `copilot plugin marketplace add MSiccDev/ai-context-kit` install flow (Claude Code and Copilot CLI share the same plugin spec)
 - **OpenAI Codex support** — `agents/openai.yaml` sidecar added to all 9 skill folders with UI display names, short descriptions, default prompts, and invocation policies for the Codex skill picker
