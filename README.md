@@ -81,7 +81,7 @@ ai-context-kit/
 │   └── context_aware_ai_session_spec.md              # Specification for AI session management
 │
 ├── templates/
-│  ├── usercontext_template.instructions.md           # Canonical v1.4.1 user context template (authoritative)
+│  ├── usercontext_template.instructions.md           # Canonical v1.4.2 user context template (authoritative)
 │  ├── AGENTS_template.md                             # Canonical AGENTS template (authoritative)
 │  └── skill_template/SKILL.md                        # Canonical skill template
 │
@@ -114,7 +114,7 @@ ai-context-kit/
 
 ---
 
-## Canonical Authority (Spec v1.4.1)
+## Canonical Authority (Spec v1.4.2)
 
 When guidance differs across files, use this authority order:
 
@@ -209,6 +209,8 @@ Operational workflow authority is skill-first:
 - `skills/repository-drift-control/`
 - `skills/create-skill/`
 - `skills/validate-skill/`
+- `skills/create-checkpoint/`
+- `skills/restore-checkpoint/`
 
 ### Invoking Skills
 
@@ -242,13 +244,13 @@ The following paths are considered **canonical**:
 - `AGENTS.md`
   - Primary agent entrypoint (repo-specific operational contract)
 - `templates/`
-  - Canonical instruction templates (spec v1.4.1)
+  - Canonical instruction templates (spec v1.4.2)
 - `skills/`
   - Canonical workflow skills (`SKILL.md`-based folders)
 - `prompts/`
   - Composition wrappers for instruction/skill workflows
 - `specs/context_aware_ai_session_spec.md`
-  - Authoritative specification (v1.4.1+)
+  - Authoritative specification (v1.4.2+)
 - Root `README.md`
   - Human-facing entry point and workflow documentation
 
@@ -352,6 +354,8 @@ Skills are namespaced to the plugin name. Inside a session:
 | `validate-project-instructions` | Validate a project-context `AGENTS.md` with scored report |
 | `validate-skill` | Validate a `SKILL.md` artifact with scored report |
 | `repository-drift-control` | Check and enforce consistency across spec, templates, and docs |
+| `create-checkpoint` | Capture session state as a checkpoint artifact (spec section 4.4) |
+| `restore-checkpoint` | Restore session state from a checkpoint artifact (spec section 4.4) |
 
 ### Update
 
@@ -452,7 +456,7 @@ Each project `AGENTS.md` should define:
 - **Languages:** LLMs work best when instructions are in English, but you can include multilingual content in user context if needed (just be aware of potential comprehension issues)
 - **Versioning:** Update user context when skills/preferences evolve; update project `AGENTS.md` when phases/objectives change. Ideally, these should live in the same repository as your codebase once they are created.
 - **Discoverability:** Semantic file extensions help AI tools identify and load the appropriate instructions automatically
-- **Canonical structure:** The templates in `/templates` define the only supported artifact structures for spec v1.4.1
+- **Canonical structure:** The templates in `/templates` define the only supported artifact structures for spec v1.4.2
 
 ---
 
