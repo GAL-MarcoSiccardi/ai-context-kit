@@ -155,7 +155,7 @@ Context compression is a mechanism for managing context window pressure in long 
 
 A compression checkpoint must preserve:
 
-- Full active session state (all §4.1 elements)
+- Full active session state (all section 4.1 elements)
 - Active constraints from the instruction layer
 - Key decisions made during the session
 - Open and in-progress tasks
@@ -165,7 +165,7 @@ A compression checkpoint must preserve:
 #### 4.5.3 Reversibility
 
 - Before compression is applied, the assistant should offer to export the current uncompressed context summary to a checkpoint file.
-- A compression checkpoint may serve as a session restore point per §4.4.
+- A compression checkpoint may serve as a session restore point per section 4.4.
 - The assistant must not imply that dropped context is recoverable after compression has been applied.
 
 ---

@@ -354,8 +354,8 @@ Skills are namespaced to the plugin name. Inside a session:
 | `validate-project-instructions` | Validate a project-context `AGENTS.md` with scored report |
 | `validate-skill` | Validate a `SKILL.md` artifact with scored report |
 | `repository-drift-control` | Check and enforce consistency across spec, templates, and docs |
-| `create-checkpoint` | Capture session state as a checkpoint artifact (§4.4) |
-| `restore-checkpoint` | Restore session state from a checkpoint artifact (§4.4) |
+| `create-checkpoint` | Capture session state as a checkpoint artifact (spec section 4.4) |
+| `restore-checkpoint` | Restore session state from a checkpoint artifact (spec section 4.4) |
 
 ### Update
 

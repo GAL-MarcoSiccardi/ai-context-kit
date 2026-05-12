@@ -14,9 +14,9 @@ When a new version is released:
 ## [Unreleased]
 
 ### Added
-- **`create-checkpoint` skill** — guided workflow to capture session state as a checkpoint artifact per §4.4, with schema reference and `agents/openai.yaml` sidecar
-- **`restore-checkpoint` skill** — guided workflow to load, validate, and restore a checkpoint artifact at session start per §4.4 restore rules, with conflict resolution reference and `agents/openai.yaml` sidecar
-- AGENTS.md now references §4.4 (Cross-Session Persistence) and §4.5 (Context Compression) with explicit behavioral instructions for both
+- **`create-checkpoint` skill** — guided workflow to capture session state as a checkpoint artifact per spec section 4.4, with schema reference and `agents/openai.yaml` sidecar
+- **`restore-checkpoint` skill** — guided workflow to load, validate, and restore a checkpoint artifact at session start per spec section 4.4 restore rules, with conflict resolution reference and `agents/openai.yaml` sidecar
+- AGENTS.md now references sections 4.4 (Cross-Session Persistence) and 4.5 (Context Compression) with explicit behavioral instructions for both
 - Prompts and Codex symlinks added for both new skills
 
 ### Safe to update from template
@@ -61,8 +61,8 @@ When a new version is released:
 ## [1.4.0] - 2026-05-08
 
 ### Added
-- **Spec §4.4 Cross-Session Persistence** — normative rules for checkpoint artifacts: proposal rules, required schema (project, role, phase, output_style, tone, interaction_mode, open_tasks, key_decisions, active_files, last_updated), and restore/conflict rules
-- **Spec §4.5 Context Compression** — normative rules for managing context window pressure: proposal rules, required compression checkpoint contents, and reversibility requirements
+- **Spec section 4.4 Cross-Session Persistence** — normative rules for checkpoint artifacts: proposal rules, required schema (project, role, phase, output_style, tone, interaction_mode, open_tasks, key_decisions, active_files, last_updated), and restore/conflict rules
+- **Spec section 4.5 Context Compression** — normative rules for managing context window pressure: proposal rules, required compression checkpoint contents, and reversibility requirements
 - `docs/spec-rationale.md`: new "Cross-Session Persistence and Context Compression" section with example checkpoint file, conflict resolution dialog, and annotated compression proposal dialog
 
 ### Changed
