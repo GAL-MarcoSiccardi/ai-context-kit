@@ -121,6 +121,7 @@ A checkpoint artifact must include the following fields:
 
 | Field | Description |
 |-------|-------------|
+| `checkpoint` | Always `true` — identifies this file as a checkpoint artifact |
 | `project` | Active project name |
 | `role` | Active role at session end |
 | `phase` | Active phase at session end |

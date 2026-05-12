@@ -12,9 +12,8 @@ Source: spec section 4.4.3.
 ## Validation Checks
 
 Before restoring, confirm the artifact:
-- Contains `checkpoint: true` in frontmatter.
-- Contains all required schema fields (see `skills/create-checkpoint/references/checkpoint-schema.md`).
-- Was not modified since `last_updated` in a way that would make the state inconsistent.
+- Contains `checkpoint: true` in frontmatter (spec section 4.4.2 required field; reject if absent).
+- Contains all other required schema fields (see `skills/create-checkpoint/references/checkpoint-schema.md`).
 
 Flag any missing fields and ask the user to supply values or confirm the instruction file default before proceeding.
 
@@ -31,7 +30,7 @@ Surface it as:
 > **Conflict — role:**
 > Checkpoint: `Developer`
 > AGENTS.md default: `Architect`
-> Which should apply? (Press Enter or no response = AGENTS.md default)
+> Which should apply? (If you don't answer, I will apply the AGENTS.md default.)
 
 If no response: apply `Architect` from AGENTS.md.
 
