@@ -1,17 +1,17 @@
 ---
-version: 1.4.1
+version: 1.4.2
 context_type: specification
 document_type: technical_specification
 created: 2025-10-20
-last_updated: 2026-05-11
+last_updated: 2026-05-12
 status: active
 intended_audience: AI-assisted developers, system designers, prompt engineers, LLM-based tooling architects
 license: Open for adaptation and refinement
 ---
 
-# Context-Aware AI Session Flow Specification (v1.4.1)
+# Context-Aware AI Session Flow Specification (v1.4.2)
 
-**Version:** 1.4.1 | **Updated:** 2026-05-11 | **Status:** Active
+**Version:** 1.4.2 | **Updated:** 2026-05-12 | **Status:** Active
 
 > This document contains the normative rules. For background reasoning, extended examples, end-to-end scenarios, and future enhancement notes, see [`docs/spec-rationale.md`](../docs/spec-rationale.md).
 
@@ -121,6 +121,7 @@ A checkpoint artifact must include the following fields:
 
 | Field | Description |
 |-------|-------------|
+| `checkpoint` | Always `true` — identifies this file as a checkpoint artifact |
 | `project` | Active project name |
 | `role` | Active role at session end |
 | `phase` | Active phase at session end |
@@ -155,7 +156,7 @@ Context compression is a mechanism for managing context window pressure in long 
 
 A compression checkpoint must preserve:
 
-- Full active session state (all §4.1 elements)
+- Full active session state (all section 4.1 elements)
 - Active constraints from the instruction layer
 - Key decisions made during the session
 - Open and in-progress tasks
@@ -165,7 +166,7 @@ A compression checkpoint must preserve:
 #### 4.5.3 Reversibility
 
 - Before compression is applied, the assistant should offer to export the current uncompressed context summary to a checkpoint file.
-- A compression checkpoint may serve as a session restore point per §4.4.
+- A compression checkpoint may serve as a session restore point per section 4.4.
 - The assistant must not imply that dropped context is recoverable after compression has been applied.
 
 ---

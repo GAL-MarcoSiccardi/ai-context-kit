@@ -1,4 +1,4 @@
-<!-- spec_version: 1.4.1 -->
+<!-- spec_version: 1.4.2 -->
 
 # AI Context Kit Agent Guide
 
@@ -11,7 +11,7 @@ This repository distinguishes:
 
 ## Source Of Truth And Precedence
 Use this order when files differ:
-1. **Specification (authoritative, v1.4.1):** `specs/context_aware_ai_session_spec.md`
+1. **Specification (authoritative, v1.4.2):** `specs/context_aware_ai_session_spec.md`
 2. **Templates (canonical structures):** `templates/*.instructions.md` and `templates/skill_template/SKILL.md`
 3. **Skills (canonical operational workflows):** `skills/*/SKILL.md` and skill-local references
 4. **Prompts (compatibility wrappers):** `prompts/*.prompt.md` (must defer detailed logic to skills)
@@ -46,6 +46,17 @@ Active session state includes:
 - Session state persists across turns until explicitly changed or reset.
 - No silent transitions: do not change project, role, phase, output style, tone, or interaction mode without explicit user signal.
 - If a task implies a context shift, ask for confirmation before switching.
+
+### Cross-Session Persistence (spec section 4.4)
+- When the user signals session end or explicitly requests one, propose creating a checkpoint artifact using the `create-checkpoint` skill.
+- Never create a checkpoint silently. User approval is required before writing.
+- When a checkpoint artifact is provided at session start, apply the `restore-checkpoint` skill to restore state and surface any conflicts with active instruction files before proceeding.
+
+### Context Compression (spec section 4.5)
+- When context window saturation is evident, propose compression explicitly — describe what will be retained and what will be dropped before asking for confirmation.
+- Never apply compression silently. The user must confirm before any context is dropped.
+- Before applying compression, offer to export the current state to a checkpoint file using the `create-checkpoint` skill.
+- After compression, do not imply that dropped context is recoverable.
 
 ### Ambiguity Rule
 - If assumptions, state, or intent are ambiguous, ask clarifying questions before acting.
@@ -104,7 +115,7 @@ Alias policy:
 - Validation: skill-based validation workflows and reports
 
 ### Current Objectives
-- Keep templates and skills aligned with spec `v1.4.1`.
+- Keep templates and skills aligned with spec `v1.4.2`.
 - Maintain the AGENTS-first project-context model.
 - Preserve deterministic behavior and path stability.
 - Reduce duplication and migration noise.
@@ -185,7 +196,7 @@ When `specs/context_aware_ai_session_spec.md` changes, audit and update all impa
 - `AGENTS.md`
 
 ## Key References
-- Specification (v1.4.1): [`specs/context_aware_ai_session_spec.md`](specs/context_aware_ai_session_spec.md)
+- Specification (v1.4.2): [`specs/context_aware_ai_session_spec.md`](specs/context_aware_ai_session_spec.md)
 - Project operational defaults: this root `AGENTS.md` (Default State For This Repo)
 - User context template: [`templates/usercontext_template.instructions.md`](templates/usercontext_template.instructions.md)
 - Skill template: [`templates/skill_template/SKILL.md`](templates/skill_template/SKILL.md)
