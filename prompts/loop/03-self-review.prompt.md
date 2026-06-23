@@ -30,8 +30,9 @@ needed to judge the touched code correctly.
 
 Prioritize findings in this order:
 - bugs and behavioral regressions
-- Clean Architecture layer violations
-  (Domain → Application → Infrastructure → Presentation)
+- architecture or layer boundary violations as defined in the project's
+  AGENTS.md and ADRs (e.g. Clean Architecture: Domain → Application →
+  Infrastructure → Presentation)
 - missing or weak tests
 - documentation or ADR drift relative to the implementation
 - other risks introduced by the change

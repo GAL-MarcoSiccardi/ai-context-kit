@@ -41,13 +41,15 @@ Rules:
 - run build and test suite after implementation and include the output
   in the report
 - do not introduce new dependencies without an explicit decision
-- before editing any arc42 section, invoke the corresponding
-  `arc42-toolkit:arc42-section-NN` skill; do not edit arc42 docs directly
-  without invoking the skill first
+- before editing any arc42 section, check whether the project has an arc42
+  helper skill available (e.g. `arc42-toolkit:arc42-section-NN`); if so,
+  invoke it rather than editing arc42 docs directly
 - update relevant arc42 docs and ADRs in the same change when architecture,
   persistence shape, or layer boundaries are affected
-- preserve Clean Architecture layer boundaries:
-  Domain → Application → Infrastructure → Presentation
+- preserve the architecture and layer boundaries defined in the project's
+  AGENTS.md and ADRs (e.g. Clean Architecture: Domain → Application →
+  Infrastructure → Presentation); do not introduce cross-layer dependencies
+  that the project has not sanctioned
 - implement only the slice approved in the readiness step; if readiness
   concluded that definition or ADR work is needed first, do that instead
   of guessing at code

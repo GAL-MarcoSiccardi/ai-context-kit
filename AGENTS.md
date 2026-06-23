@@ -14,7 +14,7 @@ Use this order when files differ:
 1. **Specification (authoritative, v1.4.2):** `specs/context_aware_ai_session_spec.md`
 2. **Templates (canonical structures):** `templates/*.instructions.md` and `templates/skill_template/SKILL.md`
 3. **Skills (canonical operational workflows):** `skills/*/SKILL.md` and skill-local references
-4. **Prompts (compatibility wrappers):** `prompts/*.prompt.md` (must defer detailed logic to skills)
+4. **Prompts:** `prompts/skills/*.prompt.md` (compatibility wrappers — must defer detailed logic to skills); `prompts/loop/*.prompt.md` (implementation loop steps — self-contained workflow prompts)
 5. **Samples and validation artifacts (illustrative records):** `usercontexts/*.instructions.md`, related `*.validation.md`
 
 ## Repository Map

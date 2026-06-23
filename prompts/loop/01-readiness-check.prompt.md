@@ -24,7 +24,8 @@ For arc42 architecture documentation, check whether a `docs/arc42/` folder exist
 
 Do not proceed to the readiness assessment until all available files above have been read.
 
-Inspect `src/` and `tests/` to confirm the current solution structure.
+Inspect the primary code and test directories to confirm the current solution structure
+(commonly `src/` and `tests/`, but use whatever the project defines).
 Check `.agents/skills/` for any applicable skills.
 
 Explicitly list in the readiness report:
@@ -44,7 +45,7 @@ Determine:
 - whether the target is implementation-ready, needs definition first,
   or is blocked by an unresolved ADR
 - the single next smallest meaningful step (code, tests, docs, or definition)
-- which files in `src/` and `tests/` would be touched
+- which files in the project's code and test directories would be touched
 
 Reply with a short readiness report covering the above,
 plus any visibility gaps or missing context.

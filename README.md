@@ -67,7 +67,7 @@ ai-context-kit/
 ├── README.md                                         # This file
 ├── LICENSE                                           # MIT License file
 │
-├── prompts/                                          # Composition prompt wrappers
+├── prompts/                                          # Prompt wrappers and implementation loop
 │   ├── skills/                                       # Skill-wrapper prompts (route to canonical skills)
 │   │   ├── create-usercontext-instructions.prompt.md # Generate user context instruction files
 │   │   ├── create-project-instructions.prompt.md     # Generate project-context AGENTS.md files
@@ -130,7 +130,7 @@ When guidance differs across files, use this authority order:
 1. `specs/context_aware_ai_session_spec.md` (normative)
 2. `templates/` (canonical artifact structures)
 3. `skills/` (canonical operational workflows)
-4. `prompts/` (composition wrappers)
+4. `prompts/skills/` (composition wrappers) and `prompts/loop/` (implementation loop)
 5. `usercontexts/` and validation artifacts (illustrative examples)
 
 Canonical template structures live in:
